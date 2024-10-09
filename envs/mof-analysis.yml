@@ -1,0 +1,36 @@
+name: mof-analysis
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+dependencies:
+  - python>=3.6
+  - pip
+  # BASICS
+  - numpy
+  - scipy
+  - pandas
+  - tqdm
+  - click
+  - ipython
+  # Specific
+  - rdkit
+  # VISUALIZATION
+  - matplotlib
+  - ipympl  # interactive matplotlib plots
+  - seaborn
+  - plotly
+  - pip:
+    - parsl
+    - kaleido
+    - dask[distributed]
+                                                           # DEVELOPMENT ONLY PACKAGES (could also be kept in a separate environment file)
+  - jupyterlab
+  - folium
+  - pytest
+  - pytest-cov
+  - tox
+  - pre_commit
+  - nbdime
+  - nbstripout
+  - sphinx
